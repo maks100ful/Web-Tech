@@ -1,0 +1,33 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family: Arial, sans-serif;
+
+body {
+    font-family: $font-family;
+    background-color: #f8f9fa;
+    color: $secondary-color;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+strong {
+    color: $primary-color;
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}

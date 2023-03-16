@@ -1,19 +1,25 @@
-$primary-color: #4CAF50;
-$secondary-color: #3e8e41;
-$background-color: #f1f1f1;
-$text-color: #333;
+@import "variables";
 
-/* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: $background-color;
-  background: url(sky-scraper.jpg) no-repeat center center fixed; 
+@mixin centrize{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+html{
+  height: 100%;
+  background: linear-gradient(to bottom, $gradient-start-color, $gradient-end-color) 0 no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+}
 /* Header styles */
 header {
   background-color: $text-color;
@@ -29,6 +35,7 @@ header {
     margin-right: 10px; /* Add margin */
     display: flex;
     justify-content: center;
+    caret-color: transparent;
   }
 
   .search-box {
@@ -61,7 +68,8 @@ header {
     display: inline-block;
     font-size: 16px;
     margin: 0 5px; /* Add margin */
-    cursor: pointer
+    cursor: pointer;
+    border-radius: 5px;
   }
   
   #cat-icon {
@@ -79,10 +87,6 @@ footer {
   padding: 10px;
 }
 
-/* Paragraph styles */
-p {
-  margin: 0;
-}
 
 /* Media queries */
 @media only screen and (max-width: 600px) {
@@ -96,3 +100,131 @@ p {
   }
   
 }
+
+.title{
+  @include centrize;
+  font-size: 60px;
+  caret-color: transparent;
+}
+
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+//cards
+.icon-cards {
+  margin-top: 40px;
+	width: 60vw;
+	height: 40vw;
+  max-width: 380px;
+  max-height: 250px;
+  color: white;
+	perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+	// This is the element that rotates with the animation
+
+	&__content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+    transform-origin: center;
+		transform-style: preserve-3d;
+		transform: translateZ(-30vw) rotateY(0);
+		animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    
+    &.step-animation {
+      animation: carousel 8s infinite steps(1) forwards;
+    }
+	}
+
+	// Individual cards
+
+	&__item {
+		position: absolute;
+		top: 0;
+		left: 0;
+    right: 0;
+    bottom: 0;
+		width: 60vw;
+		height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    border: 4px;
+		border-radius: 6px;
+    transform-origin: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+		&:nth-child(1) {
+			background: #FDD94F;
+			transform: rotateY(0) translateZ(35vw);
+		}
+
+		&:nth-child(2) {
+			background: #F87949;
+			transform: rotateY(120deg) translateZ(35vw);
+		}
+
+		&:nth-child(3) {
+			background: #FBAB48;
+			transform: rotateY(240deg) translateZ(35vw);
+		}
+
+    img{
+      height: auto;
+      width: 95%;
+    }
+	}
+}
+
+// Carousel animation
+
+@keyframes carousel {
+	0%,  17.5%  { transform: translateZ(-35vw) rotateY(0); }
+	27.5%, 45%  { transform: translateZ(-35vw) rotateY(-120deg); }
+	55%, 72.5%  { transform: translateZ(-35vw) rotateY(-240deg); }
+	82.5%, 100% { transform: translateZ(-35vw) rotateY(-360deg); }
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-col {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.photo {
+  width: 132px;
+  height: 132px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.image-col img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.image-col p {
+  margin-top: 10px;
+}
+
+
+

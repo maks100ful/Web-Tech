@@ -1,33 +1,98 @@
-$primary-color: #007bff;
-$secondary-color: #6c757d;
-$font-family: Arial, sans-serif;
+$primary-color: #4CAF50;
+$secondary-color: #3e8e41;
+$background-color: #f1f1f1;
+$text-color: #333;
 
+/* Global styles */
 body {
-    font-family: $font-family;
-    background-color: #f8f9fa;
-    color: $secondary-color;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  background: url(sky-scraper.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-h1 {
-    color: $primary-color;
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+/* Header styles */
+header {
+  background-color: $text-color;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .company-icon {
+    width: 50px; /* Add width and height */
+    height: 50px;
+    margin-right: 10px; /* Add margin */
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-box {
+    flex-grow: 1;
+    margin-right: 10px; /* Add margin */
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+  }
+
+  .auth-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+  }
+
+  button {
+    background-color: $primary-color;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 5px; /* Add margin */
+    cursor: pointer
+  }
+  
+  #cat-icon {
+    font-size: 40px;
+    top: 50%;
+    left: 50%;
+  }
 }
 
+/* Footer styles */
+footer {
+  background-color: $text-color;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Paragraph styles */
 p {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin: 1rem 0;
+  margin: 0;
 }
 
-strong {
-    color: $primary-color;
-    font-weight: bold;
-}
+/* Media queries */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
 
-em {
-    font-style: italic;
+  .auth-buttons{
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  
 }

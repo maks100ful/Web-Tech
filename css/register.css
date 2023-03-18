@@ -71,3 +71,9 @@ main form input[type=submit] {
 main form input[type=submit]:hover {
   background-color: #50c9ac;
 }
+
+@media only screen and (max-width: 600px) {
+  html {
+    overflow-y: visible;
+  }
+}

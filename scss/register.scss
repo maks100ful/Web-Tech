@@ -69,3 +69,9 @@ main {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  html{
+    overflow-y: visible;
+  }
+}

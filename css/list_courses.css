@@ -1,6 +1,68 @@
 .left-column {
   width: 16.67%;
   float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.left-column .checkbox-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.left-column .checkbox-container .checkbox-rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  padding: 10px;
+  width: 150px;
+}
+.left-column .checkbox-container .checkbox-rows .checkbox-column {
+  font-size: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.left-column .use-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
 }
 
 /* Set the size of the right column */
@@ -27,4 +89,17 @@
   content: "";
   clear: both;
   display: table;
+}
+
+@media only screen and (max-width: 600px) {
+  .left-column {
+    width: 100%;
+  }
+  .right-column {
+    width: 100%;
+    text-align: center;
+  }
+  .right-column .course {
+    text-align: left;
+  }
 }

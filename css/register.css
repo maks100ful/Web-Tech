@@ -1,10 +1,3 @@
-body {
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3ceac2), to(#05eb80)) 0 no-repeat fixed;
-  background: linear-gradient(to bottom, #3ceac2, #05eb80) 0 no-repeat fixed;
-  background-size: cover;
-}
-
 html {
   overflow-y: hidden;
 }

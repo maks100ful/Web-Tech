@@ -3,14 +3,6 @@
 $primary-color: #3cc3a3;
 $secondary-color: #fff;
 
-body{
-  height: 100%;
-  background: linear-gradient(to bottom, $gradient-start-color, $gradient-end-color) 0 no-repeat fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 html{
   overflow-y: hidden;

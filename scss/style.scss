@@ -8,7 +8,8 @@
 
 html{
   height: 100%;
-  background: linear-gradient(to bottom, $gradient-start-color, $gradient-end-color) 0 no-repeat fixed;
+  // background: linear-gradient(to bottom, $gradient-start-color, $gradient-end-color) 0 no-repeat fixed;
+  background: url(../617743.jpg) fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -86,13 +87,6 @@ header {
   }
 }
 
-/* Footer styles */
-footer {
-  background-color: $text-color;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
 
 
 /* Media queries */
@@ -112,6 +106,7 @@ footer {
   @include centrize;
   font-size: 60px;
   caret-color: transparent;
+  font-weight: 700;
 }
 
 
@@ -172,17 +167,17 @@ main{
     align-items: center;
 
 		&:nth-child(1) {
-			background: #FDD94F;
+			background: white;
 			transform: rotateY(0) translateZ(35vw);
 		}
 
 		&:nth-child(2) {
-			background: #F87949;
+			background: white;
 			transform: rotateY(120deg) translateZ(35vw);
 		}
 
 		&:nth-child(3) {
-			background: #FBAB48;
+			background: white;
 			transform: rotateY(240deg) translateZ(35vw);
 		}
 
@@ -213,6 +208,7 @@ main{
   flex-basis: calc(33.33% - 10px);
   margin-bottom: 40px;
   text-align: center;
+  font-weight: 700;
 }
 
 .photo {
@@ -233,5 +229,10 @@ main{
   margin-top: 10px;
 }
 
-
-
+footer {
+  background-color: $text-color;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  flex: 0 0 auto;
+}

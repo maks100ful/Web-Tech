@@ -1,0 +1,65 @@
+.profile-page-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+}
+.profile-page-container p {
+  font-size: 24px;
+  caret-color: transparent;
+  font-weight: 700;
+}
+
+.left-part {
+  width: 30%;
+  text-align: center;
+}
+.left-part .profile-picture {
+  width: 60%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10%;
+  border: 3px;
+  border-color: white;
+  outline: 5px;
+}
+.left-part .profile-picture img {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+
+.right-part {
+  width: 70%;
+}
+.right-part .fullname {
+  background: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+}
+.right-part .personal-info-container {
+  text-align: left;
+  border-radius: 5px;
+  background: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-page-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profile-page-container .left-part {
+    width: 100%;
+  }
+  .profile-page-container .right-part {
+    width: 100%;
+  }
+}

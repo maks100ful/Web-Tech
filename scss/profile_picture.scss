@@ -1,0 +1,60 @@
+
+.profile-page-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    p{
+        font-size: 24px;
+        caret-color: transparent;
+        font-weight: 700;
+    }
+}
+
+.left-part{
+    width: 30%;
+    text-align: center;
+    .profile-picture{
+        width: 60%;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10%;
+        border: 3px;
+        border-color: white;
+        outline: 5px;
+
+        img{
+            width: auto;
+            height: 100%;
+            margin: auto;
+        }
+    }
+}
+
+.right-part{
+    width: 70%;
+    .fullname{
+        background: white;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .personal-info-container{
+        text-align: left;
+        border-radius: 5px;
+        background: white;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .profile-page-container{
+        flex-direction: column;
+        .left-part{
+            width: 100%;
+        }
+        .right-part{
+            width: 100%;
+        }
+    }
+    
+  }

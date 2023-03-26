@@ -65,7 +65,7 @@ main form input[type=submit]:hover {
   background-color: #50c9ac;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   html {
     overflow-y: visible;
   }

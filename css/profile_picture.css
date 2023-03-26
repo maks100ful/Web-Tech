@@ -1,3 +1,22 @@
+p {
+  font-size: 24px;
+  caret-color: transparent;
+  font-weight: 700;
+  font-family: "Andale Mono", monospace;
+}
+
+h1 {
+  font-family: "Andale Mono", monospace;
+}
+
+h2 {
+  font-family: "Andale Mono", monospace;
+}
+
+h3 {
+  font-family: "Andale Mono", monospace;
+}
+
 .profile-page-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7,11 +26,6 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 10px;
-}
-.profile-page-container p {
-  font-size: 24px;
-  caret-color: transparent;
-  font-weight: 700;
 }
 
 .left-part {
@@ -44,9 +58,174 @@
   text-align: center;
 }
 .right-part .personal-info-container {
-  text-align: left;
+  text-align: center;
   border-radius: 5px;
   background: white;
+}
+.right-part .courses {
+  text-align: center;
+}
+.right-part .course {
+  border: 1px solid #ccc;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.circular-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #4CAF50;
+  -webkit-box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+.circular-button:hover {
+  background-color: #449d48;
+}
+.circular-button .mail-icon {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.circular-button .mail-icon:active {
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+}
+
+#requestlist-toggle {
+  display: none;
+}
+
+#requestlist-toggle:checked ~ .request-form {
+  display: block;
+}
+
+.request-form {
+  display: none;
+  position: fixed;
+  height: 70%;
+  width: 70%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px #000;
+  overflow-y: overlay;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(0deg, 0%, 50%);
+  /* Track */
+  /* Handle */
+}
+.request-form::-webkit-scrollbar {
+  width: 5px;
+}
+.request-form::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+.request-form::-webkit-scrollbar-thumb {
+  background: #4CAF50;
+  border-radius: 10px;
+}
+.request-form .request-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  height: 20%;
+  background-color: rgb(243, 243, 243);
+  -webkit-box-shadow: 0 0 4px #000;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+}
+.request-form .request-card .left-part-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  text-align: center;
+  height: 100%;
+}
+.request-form .request-card .left-part-card .profile-picture-request {
+  height: 80%;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10%;
+  border: 3px;
+  border-color: white;
+  outline: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.request-form .request-card .left-part-card .profile-picture-request img {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+.request-form .request-card .right-part-card {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.request-form .request-card .right-part-card .username-request {
+  font-size: 20px;
+  margin: 5px;
+}
+.request-form .request-card .right-part-card .request-description {
+  font-size: 16px;
+  margin: 4px;
+}
+.request-form .request-card .button-part-card {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.request-form .request-card .button-part-card .circular-button-request {
+  height: 50px;
+  width: 50px;
+  background-color: #4CAF50;
+  -webkit-box-shadow: 0 0 10px #000;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+.request-form .request-card .button-part-card .circular-button-request:hover {
+  background-color: #5cb860;
 }
 
 @media only screen and (max-width: 600px) {
@@ -61,5 +240,29 @@
   }
   .profile-page-container .right-part {
     width: 100%;
+  }
+  .request-form .request-card {
+    height: 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .request-form .request-card .left-part-card {
+    width: 100%;
+    height: 30%;
+  }
+  .request-form .request-card .right-part-card {
+    width: 100%;
+    height: 55%;
+  }
+  .request-form .request-card .button-part-card {
+    width: 100%;
+    height: 15%;
+  }
+  .request-form .request-card .button-part-card .circular-button-request {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 5px;
   }
 }

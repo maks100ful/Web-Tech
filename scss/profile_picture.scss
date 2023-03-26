@@ -1,13 +1,27 @@
+@import "variables";
+
+$request-card-color: rgb(243, 243, 243);
+
+p{
+    font-size: 24px;
+    caret-color: transparent;
+    font-weight: 700;
+    font-family: "Andale Mono", monospace;
+}
+h1{
+    font-family: "Andale Mono", monospace;
+}
+h2{
+    font-family: "Andale Mono", monospace;
+}
+h3{
+    font-family: "Andale Mono", monospace;
+}
 
 .profile-page-container{
     display: flex;
     flex-direction: row;
     margin-top: 10px;
-    p{
-        font-size: 24px;
-        caret-color: transparent;
-        font-weight: 700;
-    }
 }
 
 .left-part{
@@ -40,11 +54,161 @@
         text-align: center;
     }
     .personal-info-container{
-        text-align: left;
+        text-align: center;
         border-radius: 5px;
         background: white;
     }
+    .courses{
+        text-align: center;
+    }
+    .course {
+        border: 1px solid #ccc;
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
 }
+
+.circular-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $primary-color;
+    box-shadow: 5px 5px 4px rgb(0,0,0,0.5);
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+        background-color: darken($primary-color,5%);
+    }
+    .mail-icon{
+        margin: 0;
+        position: absolute;              
+        top: 50%;                         
+        transform: translate(-50%, -50%);
+        &:active{
+            transform: translate(-50%, -40%);
+        }
+    }
+  }
+
+#requestlist-toggle{
+    display: none;
+}
+
+#requestlist-toggle:checked ~ .request-form {
+    display: block;
+  }
+
+.request-form{
+    display: none;
+    position: fixed;
+    height: 70%;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background-color: white;
+    -webkit-box-shadow:0 0 10px #000;
+    overflow-y: overlay;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(0 0% 50%);
+
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      /* Track */
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+      
+      /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $primary-color;
+        border-radius: 10px;
+      }
+
+    .request-card{
+        display: flex;
+        width: 90%;
+        height: 20%;
+        background-color: $request-card-color;
+        -webkit-box-shadow:0 0 4px #000;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12px;
+        .left-part-card{
+            display: flex;
+            align-items: center;
+            width: 25%;
+            text-align: center;
+            height: 100%;
+            .profile-picture-request{
+                height: 80%;
+                aspect-ratio: 1/1;
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 10%;
+                border: 3px;
+                border-color: white;
+                outline: 5px;
+                margin-top: auto;
+                margin-bottom: auto;
+        
+                img{
+                    width: auto;
+                    height: 100%;
+                    margin: auto;
+                }
+            }
+        }
+        .right-part-card{
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .username-request{
+                font-size: 20px;
+                margin: 5px
+            }
+            .request-description{
+                font-size: 16px;
+                margin: 4px;
+            }
+        }
+        .button-part-card{
+            width: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .circular-button-request{
+                height: 50px;
+                width: 50px;
+                background-color: $primary-color;
+                -webkit-box-shadow:0 0 10px #000;
+                border-radius: 50%;
+                border: none;
+                outline: none;
+                &:hover{
+                    background-color: lighten($primary-color,5%);
+                }
+            }
+        }
+    }
+}
+
+
 
 @media only screen and (max-width: 600px) {
     .profile-page-container{
@@ -54,6 +218,30 @@
         }
         .right-part{
             width: 100%;
+        }
+    }
+    .request-form{
+        .request-card{
+            height: 40%;
+            flex-direction: column;
+            .left-part-card{
+                width: 100%;
+                height: 30%;
+            }
+            .right-part-card{
+                width: 100%;
+                height: 55%;
+                
+            }
+            .button-part-card{
+                width: 100%;
+                height: 15%;
+                .circular-button-request{
+                    height: 30px;
+                    width: 30px;
+                    margin-bottom: 5px;
+                }
+            }
         }
     }
     

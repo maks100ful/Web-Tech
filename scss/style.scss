@@ -85,6 +85,21 @@ header {
     top: 50%;
     left: 50%;
   }
+
+  .profile-mini{
+    background-color: aqua;
+    border-radius: 50%;
+    height: 50px;
+    width: auto;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    img{
+      width: auto;
+      height: 100%;
+      margin: 0 auto;
+    }
+  }
 }
 
 
@@ -93,6 +108,9 @@ header {
 @media only screen and (max-width: 750px) {
   header {
     flex-direction: column;
+    .profile-mini{
+      margin-top: 5px;
+    }
   }
 
   .auth-buttons{

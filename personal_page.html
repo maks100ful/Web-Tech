@@ -25,6 +25,9 @@
                 <img src="https://d.newsweek.com/en/full/520858/supermoon-moon-smartphone-photo-picture.jpg" alt="profile photo"></img>
             </div>
             <p>Username</p>
+            <div class="settings-container">
+              <label for="settings-toggle"><div class="settings-profile"><i class="fa-solid fa-gear"></i></div></label>
+            </div>
         </div>
 
         <div class="right-part">
@@ -51,6 +54,26 @@
             </div>
         </div>
     </div>
+
+    <input type="checkbox" id="settings-toggle">
+    <div class="settings-form">
+      <form class="left-form">
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname"><br>
+
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
     <input type="checkbox" id="requestlist-toggle">
     <label for="requestlist-toggle"><div class="circular-button"><i class="fa-sharp fa-solid fa-envelope mail-icon"></i></div></label>
     <div class="request-form">

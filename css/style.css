@@ -87,6 +87,20 @@ header #cat-icon {
   top: 50%;
   left: 50%;
 }
+header .profile-mini {
+  background-color: aqua;
+  border-radius: 50%;
+  height: 50px;
+  width: auto;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+header .profile-mini img {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+}
 
 /* Media queries */
 @media only screen and (max-width: 750px) {
@@ -95,6 +109,9 @@ header #cat-icon {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  header .profile-mini {
+    margin-top: 5px;
   }
   .auth-buttons {
     margin-left: 0px;
